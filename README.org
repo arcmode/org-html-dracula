@@ -1,0 +1,128 @@
+#+TITLE: > org-html-dracula
+#+AUTHOR: David Rojas
+#+EMAIL: (concat "drojascamaggi" at-sign "gmail.com")
+
+#+OPTIONS: toc:nil num:2 H:3 ^:nil pri:t title:nil
+
+#+SETUPFILE: ./setup.org
+
+# #+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/setup/theme-readtheorg.setup
+
+# <div id="logo">
+#   <img title="Prr! Invalid JSON is no no! -- Schema Cat" height="100" src="https://img.icons8.com/plasticine/100/000000/pixel-cat.png"></img>
+#   <img style="opacity:0.9;" title="Not my blood! -- Unicorn" height="100" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Org-mode-unicorn.svg"></img>
+#   <img style="opacity:0.1;" title="Mark up!" height="100" src="https://cdn.onlinewebfonts.com/svg/img_385126.png"></img>
+#   <img style="opacity:0.6;" title="The best color is red of course! -- Dracula" height="100" src="https://cdn.icon-icons.com/icons2/1631/PNG/512/halloween31_109166.png"></img>
+# </div>
+# #+end_export
+
+# #+begin_export html
+# <div id="logo">
+#   <img style="opacity:0.62;" title="Dracula theme is so cool" height="100" src="https://cdn.icon-icons.com/icons2/1631/PNG/512/halloween31_109166.png"></img>
+# </div>
+# #+end_export
+
+#+BEGIN_export html
+<h1 class="title">
+<span class="accent">></span> org-html-dracul<span class="inverse">a</span>
+</h2>
+#+END_export
+
+#+BEGIN_abstract
+[[https://draculatheme.com/][Dracula theme]] is my current default for code editing, gnome, terminal, etc. [[https://orgmode.org/][Org-mode]] is a great tool for workflows involving text and code documents that I'm starting to love.
+Hence I created this CSS stylesheet for Org HTML exports with Dracula colors!
+#+END_abstract
+
+#+BEGIN_QUOTE
+"My old recipes look so cool now!"\\
+-- Dracula
+#+END_QUOTE
+
+#+BEGIN_export html
+<span id="end-heading"></span>
+#+END_export
+
+#+TOC: headlines 2
+
+* Changelog
+** Initial Release
+*** New tags
+    | message                    | git      | links      |
+    |----------------------------+----------+------------|
+    | pre-release: test gh pages | v0.1.0-0 | [[https://github.com/drojas/org-html-dracula][github.com]] |
+    # | release: first release     | v0.1.1   | [[https://github.com/drojas/org-html-dracula][github.com]] |
+*** New features
+**** DONE Minimal stylesheet [2/2] [100%]
+     CLOSED: [2019-09-08 Sun 17:11]
+     - [X] include dracula theme colors
+     - [X] normalize.css +or alternative+
+
+* Tasks [0/3] [0%]
+  - [ ] Improve layout
+  - [ ] Reduce boilerplate
+  - [ ] Add support for tags
+
+* How to use
+  This document was exported from ~this~ Org file. You can use the styles in any of the following manners
+
+** Simple 
+*** Stylesheet
+    The CSS source is ~here~
+#+begin_src org
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/org.css"/>
+ #+end_src
+
+*** Setup file
+    The setup file only adds a stylesheet but may include other features in the future
+ #+begin_src org
+ #+SETUPFILE: ./setup.org
+ #+end_src
+
+** Customized
+   The following snippet can be copied and pasted to start a new document.
+   This is how the Org for of this document looks like.
+*** Org HTML boilerplate
+#+begin_src org
+#+OPTIONS: toc:nil num:3 H:4 ^:nil pri:t title:nil
+#+SETUPFILE: ./setup.org
+
+# Document heading
+
+#+begin_export html
+<div id="floating-logo">
+  images here will be seen at the top with "space between"
+</div>
+#+end_export
+
+#+BEGIN_export html
+<h1 class="title">
+  <span class="accent">></span> org-html-dracul<span class="inverse">a</span>
+</h2>
+#+END_export
+
+#+BEGIN_abstract
+This text will appear in italics after the title
+#+END_abstract
+
+#+BEGIN_QUOTE
+Quote you favorite fictional characters here :)
+#+END_QUOTE
+
+#+BEGIN_export html
+<span id="end-heading"></span>
+#+END_export
+
+#+TOC: headlines 2
+
+# continue with Org file content after this line
+
+#+end_src
+
+* Ideas
+** Using Org for more things
+   - [ ] Automated changelog with Org and git
+** UI alternatives
+   - [ ] Drawer/pusher navigation
+   - [ ] Custom exporter?
+
+* Footnotes

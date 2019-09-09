@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Roboto|Source+Code+Pro&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+
+:root {
+    --bg-color: #282a36;
+    --curr-line-color: #44475a;
+    --selection-color: #44475a;
+    --fg-color: #f8f8f2;
+    --comment-color: #6272a4;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --red: #ff5555;
+    --yellow: #f1fa8c;
+
+    --code-bg-color: #23242f;
+    --link-color: #8f8df9;
+    --light-purple: #d4b8fb;
+
+    --top-height: 145px;
+
+    --heading-color: transparent;
+    --html-bg-color: rgb(20, 21, 27);
+    --ani-time: 0.318s;
+
+    --seri-font: 'Lora', serif;
+    --text-font: 'Roboto', sans-serif;
+    --mono-font: 'Source Code Pro', monospace;
+
+    --hor-margin: 18%;
+
+    --roundness: 6px;
+}
+
+html {
+    background-color: var(--html-bg-color);
+}
+
+body {
+    font-family: var(--text-font);
+    font-size: 120%;
+    line-height: 1.4em;
+    /* background: var(--bg-color); */
+}
+
+
+.title {
+    font-family: var(--mono-font);
+    color: var(--cyan);
+    margin-top: 60px;
+}
+
+.title>span.accent {
+    color: var(--green);
+    font-weight: bold;
+}
+
+body,
+.title,
+.subtitle {}
+
+.subtitle {
+    color: var(--fg-color);
+    font-size: 1.2em;
+    font-weight: 100;
+    background-color: var(--heading-color);
+}
+
+.subtitle>span.accent {
+    color: var(--red);
+}
+
+.abstract {
+    font-style: italic;
+    line-height: 1.4em;
+    background-color: var(--heading-color);
+}
+
+.abstract p:last-of-type:before {
+    content: "    ";
+    white-space: pre;
+}
+
+.abstract p {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+p {
+    color: var(--fg-color);
+}
+
+ul,
+ol,
+.org-ul,
+.org-ol {
+    color: var(--fg-color);
+    font-family: var(--mono-font);
+    list-style-type: none;
+}
+
+#table-of-contents h2 {}
+
+:not(pre)>code {
+    color: var(--orange);
+}
+
+.subtitle,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: initial;
+}
+
+h1,
+h2 {
+    color: var(--cyan);
+}
+
+h3 {
+    color: var(--purple);
+}
+
+h4,
+h5 {
+    color: var(--light-purple);
+}
+
+a,
+a:hover,
+a:active {
+    color: var(--yellow);
+}
+
+a {
+    text-decoration: underline solid transparent;
+}
+
+a:hover,
+a:active {
+    text-decoration-color: var(--red);
+}
+
+button:focus {
+    outline: none;
+}
+
+#text-table-of-contents {
+    background-color: var(--code-bg-color);
+    border-radius: var(--roundness);
+    box-shadow: inset 0 0 4px black;
+}
+
+
+#text-table-of-contents>ul,
+#text-table-of-contents>ol {
+    padding: 42px;
+}
+
+#text-table-of-contents li ul,
+#text-table-of-contents li ol {
+    padding-inline-start: 20px;
+}
+
+#table-of-contents code {
+    color: var(--orange);
+    border: none;
+}
+
+#table-of-contents h2 {}
+
+div[id^="outline-container"] code {
+    border: none;
+}
+
+div[id^="outline-container"] {
+    margin: 42px 0;
+}
+
+div[id^="text"] :not(li)>code {
+    color: var(--yellow);
+}
+
+.todo.TODO {
+    background-color: transparent;
+    color: var(--orange);
+}
+
+.done.DONE {
+    background-color: transparent;
+    color: var(--green);
+}
+
+hr {
+    margin: 0 var(--hor-margin);
+    border-width: 1px;
+    border-top-width: 0px;
+    border-bottom-color: var(--red);
+}
+
+blockquote {
+    background-color: var(--heading-color);
+}
+
+table {
+    border-collapse: collapse;
+    font-family: var(--mono-font);
+    border: 1px solid var(--comment-color);
+    margin: 0 auto;
+}
+
+th {
+    color: var(--comment-color)
+}
+
+th,
+td {
+    padding: 10px 20px;
+}
+
+td,
+tr {
+    color: var(--fg-color);
+}
+
+tr:nth-child(even) {
+    background-color: var(--code-bg-color)
+}
+
+blockquote p {
+    text-align: right;
+    color: var(--yellow);
+    font-family: var(--seri-font);
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: var(--purple);
+    border-left-color: var(--purple);
+    border-right-color: var(--pink);
+    border-bottom-color: var(--pink);
+    padding: 42px;
+    box-shadow: inset 0px 0px 6px var(--html-bg-color);
+    font-weight: bold;
+    display: flex;
+    border-top-right-radius: calc(var(--roundness) * 1.618);
+    border-bottom-left-radius: calc(var(--roundness) * 1.618);
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    justify-content: center;
+}
+
+#content>blockquote,
+#content>div,
+#content>h1,
+#content>h2 {
+    padding: 20px var(--hor-margin) 25px var(--hor-margin);
+}
+
+#table-of-contents~div[class^="outline-"] {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#content>#end-heading~* {
+    background-color: var(--bg-color);
+}
+
+pre.src,
+pre.example {
+    margin: 20px 0;
+    padding: 42px;
+    color: var(--fg-color);
+    background-color: var(--code-bg-color);
+    white-space: pre;
+    text-shadow: 0 1px 0 #000;
+    border-width: 0px;
+    /* border-radius: 8px; */
+    border-radius: var(--roundness);
+    box-shadow: inset 0 0 4px black;
+    /* box-shadow: none; */
+    font: 16px/24px var(--mono-font);
+
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+}
+
+pre.src::before {
+    background-color: var(--yellow);
+    color: var(--code-bg-color);
+    text-shadow: none;
+    border-radius: var(--roundness);
+    border: none;
+    padding: 8px;
+}
+
+#floating-sig {
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    opacity: 0.33;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    text-align: center;
+    background-color: var(--heading-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+#postamble p {
+    text-align: center;
+    font-family: var(--mono-font);
+    padding: 0 20px;
+    color: var(--comment-color);
+}
+
+#postamble {
+    padding-top: 10px;
+    background-color: var(--code-bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#postamble p {
+    opacity: 0.318;
+}
+
+.title .inverse {
+    color: var(--html-bg-color);
+    background-color: var(--cyan);
+}
