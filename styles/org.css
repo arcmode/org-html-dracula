@@ -40,22 +40,26 @@ html {
 }
 
 body {
+    margin-top: 60px;
     font-family: var(--text-font);
     font-size: 120%;
     line-height: 1.4em;
-    /* background: var(--bg-color); */
 }
 
 
 .title {
     font-family: var(--mono-font);
     color: var(--cyan);
-    margin-top: 60px;
 }
 
 .title>span.accent {
     color: var(--green);
     font-weight: bold;
+}
+
+.title .inverse {
+    color: var(--html-bg-color);
+    background-color: var(--cyan);
 }
 
 body,
@@ -207,6 +211,27 @@ blockquote {
     background-color: var(--heading-color);
 }
 
+blockquote p {
+    color: var(--yellow);
+    padding: 42px;
+    display: flex;
+    text-align: right;
+    box-shadow: inset 0px 0px 6px var(--html-bg-color);
+    font-weight: bold;
+    font-family: var(--seri-font);
+    border-width: 2px;
+    border-style: solid;
+    justify-content: center;
+    border-top-color: var(--purple);
+    border-left-color: var(--purple);
+    border-right-color: var(--pink);
+    border-bottom-color: var(--pink);
+    border-top-left-radius: 0;
+    border-top-right-radius: calc(var(--roundness) * 1.618);
+    border-bottom-left-radius: calc(var(--roundness) * 1.618);
+    border-bottom-right-radius: 0;
+}
+
 table {
     border-collapse: collapse;
     font-family: var(--mono-font);
@@ -230,27 +255,6 @@ tr {
 
 tr:nth-child(even) {
     background-color: var(--code-bg-color)
-}
-
-blockquote p {
-    text-align: right;
-    color: var(--yellow);
-    font-family: var(--seri-font);
-    border-width: 1px;
-    border-style: solid;
-    border-top-color: var(--purple);
-    border-left-color: var(--purple);
-    border-right-color: var(--pink);
-    border-bottom-color: var(--pink);
-    padding: 42px;
-    box-shadow: inset 0px 0px 6px var(--html-bg-color);
-    font-weight: bold;
-    display: flex;
-    border-top-right-radius: calc(var(--roundness) * 1.618);
-    border-bottom-left-radius: calc(var(--roundness) * 1.618);
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-    justify-content: center;
 }
 
 #content>blockquote,
@@ -338,9 +342,4 @@ pre.src::before {
 
 #postamble p {
     opacity: 0.318;
-}
-
-.title .inverse {
-    color: var(--html-bg-color);
-    background-color: var(--cyan);
 }

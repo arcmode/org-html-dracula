@@ -6,22 +6,6 @@
 
 #+SETUPFILE: ./setup.org
 
-# #+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/setup/theme-readtheorg.setup
-
-# <div id="logo">
-#   <img title="Prr! Invalid JSON is no no! -- Schema Cat" height="100" src="https://img.icons8.com/plasticine/100/000000/pixel-cat.png"></img>
-#   <img style="opacity:0.9;" title="Not my blood! -- Unicorn" height="100" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Org-mode-unicorn.svg"></img>
-#   <img style="opacity:0.1;" title="Mark up!" height="100" src="https://cdn.onlinewebfonts.com/svg/img_385126.png"></img>
-#   <img style="opacity:0.6;" title="The best color is red of course! -- Dracula" height="100" src="https://cdn.icon-icons.com/icons2/1631/PNG/512/halloween31_109166.png"></img>
-# </div>
-# #+end_export
-
-# #+begin_export html
-# <div id="logo">
-#   <img style="opacity:0.62;" title="Dracula theme is so cool" height="100" src="https://cdn.icon-icons.com/icons2/1631/PNG/512/halloween31_109166.png"></img>
-# </div>
-# #+end_export
-
 #+BEGIN_export html
 <h1 class="title">
 <span class="accent">></span> org-html-dracul<span class="inverse">a</span>
@@ -50,7 +34,7 @@ Hence I created this CSS stylesheet for Org HTML exports with Dracula colors!
     | message                    | git      | links      |
     |----------------------------+----------+------------|
     | pre-release: test gh pages | v0.1.0-0 | [[https://github.com/drojas/org-html-dracula][github.com]] |
-    # | release: first release     | v0.1.1   | [[https://github.com/drojas/org-html-dracula][github.com]] |
+    | release: first release     | v0.1.1   | [[https://github.com/drojas/org-html-dracula][github.com]] |
 *** New features
 **** DONE Minimal stylesheet [2/2] [100%]
      CLOSED: [2019-09-08 Sun 17:11]
