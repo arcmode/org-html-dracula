@@ -3,6 +3,7 @@
 #+EMAIL: (concat "drojascamaggi" at-sign "gmail.com")
 
 #+OPTIONS: toc:nil num:2 H:3 ^:nil pri:t title:nil
+#+EXPORT_FILE_NAME: index
 
 #+SETUPFILE: ./setup.org
 
