@@ -5,79 +5,7 @@
 #+OPTIONS: toc:nil num:2 H:3 ^:nil pri:t title:nil
 #+EXPORT_FILE_NAME: index
 
-#+SETUPFILE: ./setup.org
-
-#+BEGIN_export html
-<h1 class="title">
-<span class="accent">></span> org-html-dracul<span class="inverse">a</span>
-</h2>
-#+END_export
-
-#+BEGIN_abstract
-[[https://draculatheme.com/][Dracula theme]] is my current default for code editing, gnome, terminal, etc. [[https://orgmode.org/][Org-mode]] is a great tool for workflows involving text and code documents that I'm starting to love.
-Hence I created this CSS stylesheet for Org HTML exports with Dracula colors!
-#+END_abstract
-
-#+BEGIN_QUOTE
-"My old recipes look so cool now!"\\
--- Dracula
-#+END_QUOTE
-
-#+BEGIN_export html
-<span id="end-heading"></span>
-#+END_export
-
-#+TOC: headlines 2
-
-* Changelog
-** Initial Release
-*** New tags
-    | message                    | git      | links      |
-    |----------------------------+----------+------------|
-    | pre-release: test gh pages | v0.1.0-0 | [[https://github.com/drojas/org-html-dracula][github.com]] |
-    | release: first release     | v0.1.1   | [[https://github.com/drojas/org-html-dracula][github.com]] |
-*** New features
-**** DONE Minimal stylesheet [2/2] [100%]
-     CLOSED: [2019-09-08 Sun 17:11]
-     - [X] include dracula theme colors
-     - [X] normalize.css +or alternative+
-
-* Tasks [0/3] [0%]
-  - [ ] Improve layout
-  - [ ] Reduce boilerplate
-  - [ ] Add support for tags
-
-* How to use
-  This document was exported from ~this~ Org file. You can use the styles in any of the following manners
-
-** Simple 
-*** Stylesheet
-    The CSS source is ~here~
-#+begin_src org
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/org.css"/>
- #+end_src
-
-*** Setup file
-    The setup file only adds a stylesheet but may include other features in the future
- #+begin_src org
- #+SETUPFILE: ./setup.org
- #+end_src
-
-** Customized
-   The following snippet can be copied and pasted to start a new document.
-   This is how the Org for of this document looks like.
-*** Org HTML boilerplate
-#+begin_src org
-#+OPTIONS: toc:nil num:3 H:4 ^:nil pri:t title:nil
-#+SETUPFILE: ./setup.org
-
-# Document heading
-
-#+begin_export html
-<div id="floating-logo">
-  images here will be seen at the top with "space between"
-</div>
-#+end_export
+#+SETUPFILE: https://drojas.github.io/org-html-dracula/setup.org
 
 #+BEGIN_export html
 <h1 class="title">
@@ -86,11 +14,13 @@ Hence I created this CSS stylesheet for Org HTML exports with Dracula colors!
 #+END_export
 
 #+BEGIN_abstract
-This text will appear in italics after the title
+[[https://draculatheme.com/][Dracula theme]] is a great choice for editors, UI, terminals, etc. [[https://orgmode.org/][Org-mode]] is a powerful tool for workflows involving text and code documents.
+This web site was exported by Org mode and the CSS code follows Dracula theme
 #+END_abstract
 
 #+BEGIN_QUOTE
-Quote you favorite fictional characters here :)
+"My old recipes look so cool now!"\\
+-- Vlad III
 #+END_QUOTE
 
 #+BEGIN_export html
@@ -98,10 +28,46 @@ Quote you favorite fictional characters here :)
 #+END_export
 
 #+TOC: headlines 2
+* Releases
+** Changelog
+*** Initial Release
+**** New features
+***** DONE Minimal stylesheet [2/2] [100%]
+      CLOSED: [2019-09-08 Sun 17:11]
+      - [X] include dracula theme colors
+      - [X] normalize.css +or alternative+
 
-# continue with Org file content after this line
+**** Tags
+     | git      | message                    | links      |
+     |----------+----------------------------+------------|
+     | v0.1.0-0 | pre-release: test gh pages | [[https://github.com/drojas/org-html-dracula][github.com]] |
+     | v0.1.1   | release: first release     | [[https://github.com/drojas/org-html-dracula][github.com]] |
+* Roadmap
+** Tasks [0/3] [0%]
+   - [ ] Improve layout
+   - [ ] Reduce boilerplate
+   - [ ] Add support for tags
 
-#+end_src
+* How to use
+*** Setup file
+  #+ATTR_HTML: :target _blank
+    You can use [[https://drojas.github.io/org-html-dracula/setup.org][this]] setup file which only adds a stylesheet at the moment of writing this
+ #+begin_src org
+ #+SETUPFILE: https://drojas.github.io/org-html-dracula/setup.org
+ #+end_src
+
+*** Stylesheet
+  #+ATTR_HTML: :target _blank
+    Or you can include the [[https://github.com/drojas/org-html-dracula/blob/master/styles/org.css][stylesheet]] in your Org files directly
+#+begin_src org
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://drojas.github.io/org-html-dracula/styles/org.css"
+ #+end_src
+    It contains the following css
+#+INCLUDE: "./styles/org.css" src css
+
+** Customized
+   This is actually the Org file that exports this HTML document looks like.
+#+INCLUDE: "./README.org" src org
 
 * Ideas
 ** Using Org for more things

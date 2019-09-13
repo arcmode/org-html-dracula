@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lora|Roboto|Source+Code+Pro&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
-
 :root {
     --bg-color: #282a36;
     --curr-line-color: #44475a;
@@ -23,7 +22,7 @@
     --top-height: 145px;
 
     --heading-color: transparent;
-    --html-bg-color: rgb(20, 21, 27);
+    --html-bg-color: var(--code-bg-color);
     --ani-time: 0.318s;
 
     --seri-font: 'Lora', serif;
@@ -46,7 +45,6 @@ body {
     line-height: 1.4em;
 }
 
-
 .title {
     font-family: var(--mono-font);
     color: var(--cyan);
@@ -61,10 +59,6 @@ body {
     color: var(--html-bg-color);
     background-color: var(--cyan);
 }
-
-body,
-.title,
-.subtitle {}
 
 .subtitle {
     color: var(--fg-color);
@@ -106,8 +100,6 @@ ol,
     list-style-type: none;
 }
 
-#table-of-contents h2 {}
-
 :not(pre)>code {
     color: var(--orange);
 }
@@ -147,19 +139,17 @@ a {
 
 a:hover,
 a:active {
+    text-decoration-color: var(--green);
+}
+
+.abstract a:hover,
+.abstract a:active {
     text-decoration-color: var(--red);
 }
 
 button:focus {
     outline: none;
 }
-
-#text-table-of-contents {
-    background-color: var(--code-bg-color);
-    border-radius: var(--roundness);
-    box-shadow: inset 0 0 4px black;
-}
-
 
 #text-table-of-contents>ul,
 #text-table-of-contents>ol {
@@ -176,14 +166,12 @@ button:focus {
     border: none;
 }
 
-#table-of-contents h2 {}
-
 div[id^="outline-container"] code {
     border: none;
 }
 
 div[id^="outline-container"] {
-    margin: 42px 0;
+    margin: 20px 0;
 }
 
 div[id^="text"] :not(li)>code {
@@ -207,16 +195,14 @@ hr {
     border-bottom-color: var(--red);
 }
 
-blockquote {
-    background-color: var(--heading-color);
-}
-
 blockquote p {
     color: var(--yellow);
+    background-color: var(--bg-color);
     padding: 42px;
     display: flex;
     text-align: right;
-    box-shadow: inset 0px 0px 6px var(--html-bg-color);
+    text-shadow: 0px 0px 4px var(--black);
+    box-shadow: inset 0px 0px 60px var(--code-bg-color);
     font-weight: bold;
     font-family: var(--seri-font);
     border-width: 2px;
@@ -226,17 +212,17 @@ blockquote p {
     border-left-color: var(--purple);
     border-right-color: var(--pink);
     border-bottom-color: var(--pink);
-    border-top-left-radius: 0;
-    border-top-right-radius: calc(var(--roundness) * 1.618);
-    border-bottom-left-radius: calc(var(--roundness) * 1.618);
-    border-bottom-right-radius: 0;
+    border-top-left-radius: calc(var(--roundness) * 1.618);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: calc(var(--roundness) * 1.618);
+    border-bottom-left-radius: 0;
 }
 
 table {
     border-collapse: collapse;
     font-family: var(--mono-font);
     border: 1px solid var(--comment-color);
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 th {
@@ -271,6 +257,11 @@ tr:nth-child(even) {
     padding-bottom: 20px;
 }
 
+
+#content>#end-heading {
+    border-bottom: 1px solid var(--red);
+}
+
 #content>#end-heading~* {
     background-color: var(--bg-color);
 }
@@ -282,7 +273,6 @@ pre.example {
     color: var(--fg-color);
     background-color: var(--code-bg-color);
     white-space: pre;
-    text-shadow: 0 1px 0 #000;
     border-width: 0px;
     /* border-radius: 8px; */
     border-radius: var(--roundness);
@@ -302,12 +292,13 @@ pre.example {
 }
 
 pre.src::before {
-    background-color: var(--yellow);
+    background-color: var(--light-purple);
     color: var(--code-bg-color);
     text-shadow: none;
     border-radius: var(--roundness);
     border: none;
     padding: 8px;
+    top: 10px;
 }
 
 #floating-sig {
